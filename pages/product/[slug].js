@@ -61,7 +61,7 @@ export async function getServerSideProps(context) {
   console.log(context.query)
   let headers = { Authorization: "Bearer 29cf77865c9e8d10efac0d6b134a01dc7ad980477be673caa5f5f7e98b28cb8efbbf820f0e0028ae65c08779b58f487fe5dc15979a67f3f0bc0de5e3dde76b6b590cb6827e2cdd849cf3d09955ba0a646e0fea0a271382d0046e9507d2334f87637c40cb0dd6fc7e273187d36d4748942986dce8f42aa0320ed2487daee73567" }
 
-  let a = await fetch("https://ecart-3xwd.onrender.com/api/products?filters[slug]=" + context.query.slug +"&populate=*", { headers: headers })
+  let a = await fetch("https://ecart-3xwd.onrender.com/api/products?filters[slug]=" + context.query.slug +"&populate=*")
   let product = await a.json()
   console.log(product)
   return {
