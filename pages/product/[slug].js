@@ -39,7 +39,7 @@ const Slug = ({ product , addToCart , cart }) => {
               
               <div className="flex">
                 <span className="flex mx-2 py-2 title-font font-big font-extrabold text-2xl text-gray-900">₹{product.attributes.price}</span>
-                <button onClick={()=>{addToCart(slug,product.attributes.price,1)}} className="my-2 text-white bg-indigo-500 border-0 py-1 m-5 md:py-2 px-2 md:px-4 focus:outline-none hover:bg-indigo-600 rounded text-sm" src="https::">Add to Cart</button>
+                <button onClick={()=>{addToCart(product.attributes.name,product.attributes.price,1)}} className="my-2 text-white bg-indigo-500 border-0 py-1 m-5 md:py-2 px-2 md:px-4 focus:outline-none hover:bg-indigo-600 rounded text-sm" src="https::">Add to Cart</button>
                 <button onClick={()=>{router.push('/cart')}} className="my-2 text-white bg-indigo-500 border-0 py-1 m-5 md:py-2 px-2 md:px-4 focus:outline-none hover:bg-indigo-600 rounded text-sm" src="https::">CheckOut</button>
                 <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
